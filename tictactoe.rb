@@ -1,9 +1,10 @@
 require 'sinatra'
 require 'json'
+require 'sinatra/reloader' if development?
 
 post '/game' do
-player_1 = params["player_1_name"]
-player_2 = params["player_2_name"]
+  player_1 = params["player_1_name"]
+  player_2 = params["player_2_name"]
 end
 
 post '/move' do
@@ -11,7 +12,7 @@ post '/move' do
   move = params["position"]
   if status == "ok"
   redirect '/game', 201
-elsif status == "invalid"
+  elsif status == "invalid"
   redirect '/game', 409
-
+  end
 end
