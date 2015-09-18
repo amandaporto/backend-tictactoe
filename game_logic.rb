@@ -2,17 +2,17 @@ class Game
 
   def initialize
     @response = {
-      "status": "ok",
-      "board": { "state": "playing",
-        "positions": {  "0": " ",
-                        "1": " ",
-                        "2": " ",
-                        "3": " ",
-                        "4": " ",
-                        "5": " ",
-                        "6": " ",
-                        "7": " ",
-                        "8": " "
+      status: "ok",
+      board: { "state": "playing",
+        positions: {  0: " ",
+                      1: " ",
+                      2: " ",
+                      3: " ",
+                      4: " ",
+                      5: " ",
+                      6: " ",
+                      7: " ",
+                      8: " "
         }
       }
     }
