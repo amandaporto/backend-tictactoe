@@ -11,8 +11,8 @@ post '/move' do
   current_player = params["player"]
   move = params["position"]
   if status == "ok"
-  redirect '/game', 201
+  status 201
   elsif status == "invalid"
-  redirect '/game', 409
+  status 409
   end
 end
