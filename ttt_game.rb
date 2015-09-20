@@ -91,7 +91,7 @@ end
 post "/move" do
   headers "Access-Control-Allow-Origin" => "*"
 
-  player = params[:player]
+  player = params[:player].upcase
   move = params[:positions].to_i
 
   board = settings.board
