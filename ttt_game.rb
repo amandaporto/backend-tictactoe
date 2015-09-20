@@ -84,7 +84,7 @@ post "/game" do
       }
     }
   }
-
+  status 200
   results.to_json
 end
 
@@ -115,6 +115,7 @@ post "/move" do
         }
       }
     }
+    status 409
   else
     board.move(move, player)
     results = {
@@ -134,6 +135,7 @@ post "/move" do
         }
       }
     }
+    status 200
   end
 
   results.to_json
